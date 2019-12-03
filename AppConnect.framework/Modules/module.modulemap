@@ -1,0 +1,6 @@
+framework module AppConnect {
+  umbrella header "AppConnect.h"
+
+  export *
+  module * { export * }
+}

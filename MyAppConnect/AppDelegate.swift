@@ -7,15 +7,38 @@
 //
 
 import UIKit
+import AppConnect
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,  AppConnectDelegate {
+    func appConnectIsReady(_ appConnect: AppConnect) {
+        print("app connect is ready")
+    }
+    
+    func appConnect(_ appConnect: AppConnect, authStateChangedTo newAuthState: ACAuthState, withMessage message: String?) {
+        print("appconnect auth state changed")
+    }
+    
 
+    var appConnect: AppConnect?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        startAppConnect(launchOptions: launchOptions)
         return true
+    }
+    
+    
+    func stopAppConnect() {
+        self.appConnect!.retire()
+        self.appConnect!.stop()
+        self.appConnect = nil
+    }
+
+    func startAppConnect(launchOptions: [AnyHashable : Any]? = [:]) {
+        AppConnect.initWith(self)
+        self.appConnect = AppConnect.sharedInstance()
+        self.appConnect!.start(launchOptions: launchOptions)
     }
 
     // MARK: UISceneSession Lifecycle

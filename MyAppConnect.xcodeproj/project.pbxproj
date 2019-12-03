@@ -13,7 +13,26 @@
 		BEF67F522396494400EF3DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF67F512396494400EF3DB3 /* Assets.xcassets */; };
 		BEF67F552396494400EF3DB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF67F542396494400EF3DB3 /* Preview Assets.xcassets */; };
 		BEF67F582396494400EF3DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF67F562396494400EF3DB3 /* LaunchScreen.storyboard */; };
+		BEF67F6623964A4600EF3DB3 /* AppConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF67F6423964A3600EF3DB3 /* AppConnect.framework */; };
+		BEF67F6723964A4600EF3DB3 /* AppConnect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEF67F6423964A3600EF3DB3 /* AppConnect.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEF67F6A23964A9E00EF3DB3 /* AppConnectResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF67F6923964A9E00EF3DB3 /* AppConnectResources.bundle */; };
+		BEF67F7023964F6C00EF3DB3 /* ACType+Descriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF67F6F23964F6B00EF3DB3 /* ACType+Descriptions.swift */; };
+		BEF67F7A23965ADF00EF3DB3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF67F7923965ADF00EF3DB3 /* main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEF67F6823964A4600EF3DB3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BEF67F6723964A4600EF3DB3 /* AppConnect.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BEF67F482396494300EF3DB3 /* MyAppConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +43,12 @@
 		BEF67F542396494400EF3DB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BEF67F572396494400EF3DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEF67F592396494400EF3DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF67F6423964A3600EF3DB3 /* AppConnect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppConnect.framework; sourceTree = "<group>"; };
+		BEF67F6923964A9E00EF3DB3 /* AppConnectResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppConnectResources.bundle; sourceTree = "<group>"; };
+		BEF67F6E23964CE100EF3DB3 /* MyAppConnect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyAppConnect-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEF67F6F23964F6B00EF3DB3 /* ACType+Descriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ACType+Descriptions.swift"; sourceTree = "<group>"; };
+		BEF67F7223964FF900EF3DB3 /* AppConnectHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConnectHandler.h; sourceTree = "<group>"; };
+		BEF67F7923965ADF00EF3DB3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF67F6623964A4600EF3DB3 /* AppConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +66,10 @@
 		BEF67F3F2396494300EF3DB3 = {
 			isa = PBXGroup;
 			children = (
+				BEF67F6923964A9E00EF3DB3 /* AppConnectResources.bundle */,
 				BEF67F4A2396494300EF3DB3 /* MyAppConnect */,
 				BEF67F492396494300EF3DB3 /* Products */,
+				BEF67F5F23964A1500EF3DB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +84,18 @@
 		BEF67F4A2396494300EF3DB3 /* MyAppConnect */ = {
 			isa = PBXGroup;
 			children = (
-				BEF67F4B2396494300EF3DB3 /* AppDelegate.swift */,
+				BEF67F7123964FDE00EF3DB3 /* Shared */,
 				BEF67F4D2396494300EF3DB3 /* SceneDelegate.swift */,
 				BEF67F4F2396494300EF3DB3 /* ContentView.swift */,
 				BEF67F512396494400EF3DB3 /* Assets.xcassets */,
 				BEF67F562396494400EF3DB3 /* LaunchScreen.storyboard */,
 				BEF67F592396494400EF3DB3 /* Info.plist */,
 				BEF67F532396494400EF3DB3 /* Preview Content */,
+				BEF67F7223964FF900EF3DB3 /* AppConnectHandler.h */,
+				BEF67F4B2396494300EF3DB3 /* AppDelegate.swift */,
+				BEF67F6E23964CE100EF3DB3 /* MyAppConnect-Bridging-Header.h */,
+				BEF67F6F23964F6B00EF3DB3 /* ACType+Descriptions.swift */,
+				BEF67F7923965ADF00EF3DB3 /* main.swift */,
 			);
 			path = MyAppConnect;
 			sourceTree = "<group>";
@@ -75,6 +108,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BEF67F5F23964A1500EF3DB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEF67F6423964A3600EF3DB3 /* AppConnect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEF67F7123964FDE00EF3DB3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +133,8 @@
 				BEF67F442396494300EF3DB3 /* Sources */,
 				BEF67F452396494300EF3DB3 /* Frameworks */,
 				BEF67F462396494300EF3DB3 /* Resources */,
+				BEF67F6823964A4600EF3DB3 /* Embed Frameworks */,
+				BEF67F6B23964ADA00EF3DB3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF67F6A23964A9E00EF3DB3 /* AppConnectResources.bundle in Resources */,
 				BEF67F582396494400EF3DB3 /* LaunchScreen.storyboard in Resources */,
 				BEF67F552396494400EF3DB3 /* Preview Assets.xcassets in Resources */,
 				BEF67F522396494400EF3DB3 /* Assets.xcassets in Resources */,
@@ -141,14 +192,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BEF67F6B23964ADA00EF3DB3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nAPPCONNECT_BINARY_PATH=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppConnect.framework/AppConnect\"\necho \"$APPCONNECT_BINARY_PATH\"\n\n# Getting the archs list from -info command by truncating the string from the latest ':' occurrence\nFAT_ARCHS=\"$(lipo -info \"$APPCONNECT_BINARY_PATH\" | cut -d : -f 3)\"\n\nfor arch in $FAT_ARCHS; do\n  if ! [[ \"${ARCHS}\" == *\"$arch\"* ]]; then\n    lipo -remove \"$arch\" -output \"$APPCONNECT_BINARY_PATH\" \"$APPCONNECT_BINARY_PATH\" || exit 1\n    echo \"Stripping arch $arch\"\n  fi\ndone\n\nif [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY}\" && \"${CODE_SIGNING_REQUIRED}\" == \"YES\" && \"${CODE_SIGNING_ALLOWED}\" == \"YES\" ]]; then\n    /usr/bin/codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements \"${APPCONNECT_BINARY_PATH}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEF67F442396494300EF3DB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BEF67F4C2396494300EF3DB3 /* AppDelegate.swift in Sources */,
+				BEF67F7A23965ADF00EF3DB3 /* main.swift in Sources */,
 				BEF67F4E2396494300EF3DB3 /* SceneDelegate.swift in Sources */,
 				BEF67F502396494300EF3DB3 /* ContentView.swift in Sources */,
+				BEF67F7023964F6C00EF3DB3 /* ACType+Descriptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +360,21 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyAppConnect/Preview Content\"";
 				DEVELOPMENT_TEAM = 4XF66GVJ62;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyAppConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sky.myappconnect.MyAppConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyAppConnect/MyAppConnect-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,14 +387,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyAppConnect/Preview Content\"";
 				DEVELOPMENT_TEAM = 4XF66GVJ62;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyAppConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sky.myappconnect.MyAppConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyAppConnect/MyAppConnect-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
